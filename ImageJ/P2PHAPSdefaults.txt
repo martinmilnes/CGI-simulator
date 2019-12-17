@@ -1,0 +1,11 @@
+PluginsDir D:/ImageJ/plugins/
+ConfigDir D:/CGI/P2PHAPS/Config/
+DataDir D:/CGI/P2PHAPS/Data
+TracksDir D:/CGI/P2PHAPS/Tracks
+BackgroundImage D:/CGI/P2PHAPS/Config/LatLonNewNA.png
+GeodesicFname D:/CGI/P2PHAPS/Config/Geodesic.csv
+LaunchSitesFname D:/CGI/P2PHAPS/Config/LaunchSites.txt
+LandingSitesFname D:/CGI/P2PHAPS/Config/LandingSites.txt
+GroundStationsFname D:/CGI/P2PHAPS/Config/GroundStations.txt
+DialogXpos 1140
+DialogYpos 0
