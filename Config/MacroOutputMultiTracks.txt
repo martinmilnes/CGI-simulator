@@ -1,0 +1,5 @@
+open("D:/CGI/P2PHAPS/ImageJ/LatLonNewNA.png");
+run("MultiLevel Vectors Atlantic", "heightlevel=11 time=0 flighttime=0 geodesic showmultitracks");
+run("Flatten");
+saveAs("Gif", "D:/CGI/P2PHAPS/Tracks/20191109_Run620/NewTest3.gif");
+close();

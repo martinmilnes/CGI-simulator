@@ -1,0 +1,7 @@
+FileUfname conv_uwinds_2018.bil
+FileVfname conv_vwinds_2018.bil
+PlotGrid 1
+arrowScale 2.0
+headScale 0.25
+DialogXpos 1140
+DialogYpos 0

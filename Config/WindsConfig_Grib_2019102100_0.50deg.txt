@@ -1,0 +1,8 @@
+FileUfname Oct18-Jan19/ugrd_2019102100_2.bin
+FileVfname Oct18-Jan19/vgrd_2019102100_2.bin
+PlotGrid 2
+arrowScale 1.0
+headScale 0.15
+MetNumX 240
+MetNumY 120
+MetCellSize 0.5

@@ -1,0 +1,8 @@
+GeodesicFname D:/CGI/P2PHAPS/ImageJ/Geodesic.csv
+FileUfname D:/CGI/P2PHAPS/SJB_v1/ugrd_2019100900.bin
+FileVfname D:/CGI/P2PHAPS/SJB_v1/vgrd_2019100900.bin
+LaunchSitesFname D:/CGI/P2PHAPS/ImageJ/LaunchSites.txt
+TracksDir D:/CGI/P2PHAPS/Tracks
+PlotGrid 1
+arrowScale 1.0
+headScale 0.15

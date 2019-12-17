@@ -1,0 +1,29 @@
+// Script to perform same run conditions over mulitple launch sites
+
+NumMetSubSteps=1;
+NumSplits=3;
+SplitInterval=24;
+
+LaunchStart=0;
+LaunchPeriod=365;
+
+
+// Load background and ensure correct Met Data configured
+open("D:/CGI/P2PHAPS/ImageJ/LatLonNewNA.png");
+rename("6-Hourly 2018 winds");
+File.copy("D:/ImageJ/plugins/WindsConfig_2018_Daily4x.txt","D:/ImageJ/plugins/WindsConfig_Default.txt");
+
+//for LaunchSite=xxx
+//{
+
+   name="Aurora"
+   // Copy LaunchSites_<name>.txt to LaunchSites.txt
+   File.copy("D:/CGI/P2PHAPS/ImageJ/LaunchSites_"+name+".txt", "D:/CGI/P2PHAPS/ImageJ/LaunchSites.txt");
+
+   val1="time="+LaunchStart;
+   val2=" nummetsubsteps="+NumMetSubSteps+" timestep=3 splittinginterval="+SplitInterval+" maxsplitting="+NumSplits;
+   val3=" maxsplithalfrange=5 geodesic only_good yearly launchperiod="+LaunchPeriod+" best_track usetimevarying";
+   // Run MultiLevel_Vectors_Atlantic with specified args
+   run("MultiLevel Vectors Atlantic", val1+val2+val3);
+
+//}

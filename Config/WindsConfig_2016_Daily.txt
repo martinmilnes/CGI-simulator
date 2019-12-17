@@ -1,0 +1,5 @@
+FileUfname conv_uwinds_2016.bil
+FileVfname conv_vwinds_2016.bil
+PlotGrid 1
+arrowScale 2.0
+headScale 0.25

@@ -1,0 +1,10 @@
+FileUfname Oct18-Jan19/2018-Oct-U.bin
+FileVfname Oct18-Jan19/2018-Oct-V.bin
+PlotGrid 2
+arrowScale 1.0
+headScale 0.15
+MetNumX 121
+MetNumY 61
+MetCellSize 1.0
+DialogXpos 1140
+DialogYpos 0

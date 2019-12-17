@@ -1,0 +1,12 @@
+WindFilesList WindFilesList1deg6hr.txt
+PlotGrid 2
+arrowScale 1.0
+headScale 0.15
+MetNumX 121
+MetNumY 61
+MetCellSize 1.0
+MetTimeStep 6
+PlotBalloonPos 0
+DialogXpos 1140
+DialogYpos 0
+SelectedLaunchSite 9

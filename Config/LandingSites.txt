@@ -1,0 +1,7 @@
+Snowdonia 53.0 -4.0
+LabradorCity 52.95 -66.917
+Aurora 44.0 -79.47
+Gijon 43.6 -5.85
+Brest 48.4 -4.5
+Penzance 50.12 -5.55
+Thurso 58.6 -3.55

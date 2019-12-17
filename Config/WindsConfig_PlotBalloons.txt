@@ -1,0 +1,10 @@
+FileUfname conv_uwinds4x_2018.bil
+FileVfname conv_vwinds4x_2018.bil
+SelectedLaunchSite 12
+SelectedLandingSite 1
+PlotGrid 1
+arrowScale 2.0
+headScale 0.25
+PlotBalloonPos 1
+BalloonLaunchTime 1548
+SelectedMultiTrackFile 6
