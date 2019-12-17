@@ -1,0 +1,31 @@
+//var ConfigDir="D:/ImageJ/plugins/"
+//var PluginsDir="D:/ImageJ/plugins/"
+//var BackgroundImage="D:/CGI/P2PHAPS/ImageJ/LatLonNewNA.png"
+
+filestring=File.openAsString("P2PHAPSdefaults.txt");
+rows=split(filestring, "\n");
+x=newArray(rows.length);
+y=newArray(rows.length);
+for(i=0; i<rows.length; i++){
+  columns=split(rows[i]," ");
+  x[i]=columns[0];
+  y[i]=columns[1];
+//  print("row="+i+", name="+x[i]+", val="+y[i]);
+  if (x[i]=="PluginsDir")
+     PluginsDir=y[i];
+  if (x[i]=="ConfigDir")
+     ConfigDir=y[i];
+  if (x[i]=="BackgroundImage")
+     BackgroundImage=y[i];
+}
+
+args=getArgument();
+argvals=split(args,",");
+var WindsFile=argvals[0];
+var WindsTitle=argvals[1];
+
+open(BackgroundImage);
+rename(WindsTitle);
+File.copy(ConfigDir+WindsFile,ConfigDir+"WindsConfig_Default.txt");
+run("MultiLevel Vectors Atlantic");
+close("*");
