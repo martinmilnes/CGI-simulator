@@ -1,0 +1,74 @@
+ 254796 conv_uwinds_2015.bil
+ 255492 conv_uwinds_2016.bil
+ 254796 conv_uwinds_2017.bil
+ 254796 conv_uwinds_2018.bil
+1019172 conv_uwinds4x_2018.bil
+ 254796 conv_vwinds_2015.bil
+ 255492 conv_vwinds_2016.bil
+ 254796 conv_vwinds_2017.bil
+ 254796 conv_vwinds_2018.bil
+1019172 conv_vwinds4x_2018.bil
+   8380 datau.r4
+   8380 datav.r4
+      1 WindFilesList1.0.txt
+      4 WindFilesList1deg6hr.txt
+
+full2018:
+total 1267536
+  420 2018-Apr.idx
+51900 2018-Apr-U.bin
+51900 2018-Apr-V.bin
+53628 2018-Aug-U.bin
+53628 2018-Aug-V.bin
+  432 2018-Dec.idx
+53628 2018-Dec-U.bin
+53628 2018-Dec-V.bin
+  392 2018-Feb.idx
+48440 2018-Feb-U.bin
+48440 2018-Feb-V.bin
+  432 2018-Jan.idx
+53628 2018-Jan-U.bin
+53628 2018-Jan-V.bin
+  432 2018-Jul.idx
+53628 2018-Jul-U.bin
+53628 2018-Jul-V.bin
+  420 2018-Jun.idx
+51900 2018-Jun-U.bin
+51900 2018-Jun-V.bin
+  432 2018-Mar.idx
+53628 2018-Mar-U.bin
+53628 2018-Mar-V.bin
+  432 2018-May.idx
+53628 2018-May-U.bin
+53628 2018-May-V.bin
+  420 2018-Nov.idx
+51900 2018-Nov-U.bin
+51900 2018-Nov-V.bin
+  432 2018-Oct.idx
+53628 2018-Oct-U.bin
+53628 2018-Oct-V.bin
+  420 2018-Sep.idx
+51900 2018-Sep-U.bin
+51900 2018-Sep-V.bin
+
+Oct18-Jan19:
+total 1426728
+   684 2018-Dec.idx
+107256 2018-Dec-U.bin
+107256 2018-Dec-V.bin
+   664 2018-Nov.idx
+103796 2018-Nov-U.bin
+103796 2018-Nov-V.bin
+   684 2018-Oct.idx
+107256 2018-Oct-U.bin
+107256 2018-Oct-V.bin
+169808 ugrd_2019102100.bin
+169808 ugrd_2019102100_1.bin
+  1688 ugrd_2019102100_10.bin
+ 42188 ugrd_2019102100_2.bin
+ 10548 ugrd_2019102100_4.bin
+169808 vgrd_2019102100.bin
+169808 vgrd_2019102100_1.bin
+  1688 vgrd_2019102100_10.bin
+ 42188 vgrd_2019102100_2.bin
+ 10548 vgrd_2019102100_4.bin
