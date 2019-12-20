@@ -1,0 +1,32 @@
+Launch Site: Sept-Iles
+StartLaunchDate: 20180101
+StartLaunchTime: 0000
+FileUfname: D:/CGI/P2PHAPS/WindClimatology/2018_full/2018-Dec-U.bin
+FileVfname: D:/CGI/P2PHAPS/WindClimatology/2018_full/2018-Dec-V.bin
+MetCellSize: 1.0
+LaunchTimeStep: 6.0
+MaxLaunchTimes: 97
+SplittingInterval: 24.0
+MaxSplitIntervals: 3
+MaxSplitHalfRange: 5
+MaxBalloonLaunchTimes: 9000
+MetTimeSteps: 6.0
+NumMetSubSteps: 1
+TimeStep: 3.0
+DlatlonThresh: 0.5
+UseTimeVarying: true
+OutputBestTrackDetails: true
+OutputAnyTrackDetails: false
+MetNumX: 121
+MetNumY: 61
+MetNumH: 15
+MetNumT: 1460
+imTimeStep: 0
+MetTime: 6.0hr
+StartLon: -57.0
+StartLat: 53.71
+Landing Site: Snowdonia
+TargetEndLon: -4.0
+TargetEndLat: 53.0
+Start GroundStation: SudburyGS
+End GroundStation: SnowdoniaGS
