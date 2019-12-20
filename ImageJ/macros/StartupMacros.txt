@@ -24,7 +24,7 @@
 
    // The macro named "AutoRun" runs when ImageJ starts.
    macro "AutoRun" {
-       run("plugins/ActionBar/P2PHAPS.txt");
+       runMacro("plugins/ActionBar/P2PHAPS.txt");
    }
 
    // The macro named "AutoRunAndHide" runs when ImageJ starts
