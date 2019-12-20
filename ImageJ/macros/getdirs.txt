@@ -10,7 +10,7 @@ for(i=0; i<rows.length; i++){
   columns=split(rows[i]," ");
   x[i]=columns[0];
   y[i]=columns[1];
-//  print("row="+i+", name="+x[i]+", val="+y[i]);
+  //print("row="+i+", name="+x[i]+", val="+y[i]);
   if (x[i]=="PluginsDir")
      PluginsDir=y[i];
   if (x[i]=="ConfigDir")
@@ -28,4 +28,4 @@ open(BackgroundImage);
 rename(WindsTitle);
 File.copy(ConfigDir+WindsFile,ConfigDir+"WindsConfig_Default.txt");
 run("MultiLevel Vectors Atlantic");
-close("*");
+//close("*");
