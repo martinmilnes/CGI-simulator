@@ -135,7 +135,7 @@ public class MultiLevel_Vectors_Atlantic implements ExtendedPlugInFilter, Dialog
 
    int MaxLaunchSites = 20;
    int NumLaunchSites = 0; //3;
-   int SelectedLaunchSite = 12; //Sudbury
+   int SelectedLaunchSite = 8; //Sept-Iles
    String[] LaunchName = new String[MaxLaunchSites]; //{"Cartwright", "Sonora", "CapeCod" };
    double[] LaunchLat = new double[MaxLaunchSites];  //{ 53.71,    45.11,   42.1 };
    double[] LaunchLon = new double[MaxLaunchSites];  //{ -57.0,   -61.93,  -70.15 };
@@ -409,7 +409,7 @@ public class MultiLevel_Vectors_Atlantic implements ExtendedPlugInFilter, Dialog
    public  void ListSites(String topdir, String wildcard) 
    {
    	   int NumFiles = 0;
-   	   
+   	//IJ.log("ListSites: topdir="+topdir);   
        try { 
       	    File dir = new File(topdir);
             File[] files = dir.listFiles();
@@ -475,6 +475,8 @@ public class MultiLevel_Vectors_Atlantic implements ExtendedPlugInFilter, Dialog
 				//IJ.log("line="+iline+" :" + row + "data[0]="+data[0]+", data[1]="+data[1]);	
 				if (data[0].compareTo("TracksDir")==0)
 					TracksDir = data[1];
+				else if (data[0].compareTo("SitesDir")==0)
+					SitesDir = data[1];
 				else if (data[0].compareTo("PluginsDir")==0)
 					PluginsDir = data[1];
 				else if (data[0].compareTo("ConfigDir")==0)
@@ -531,6 +533,8 @@ public class MultiLevel_Vectors_Atlantic implements ExtendedPlugInFilter, Dialog
 				*/
 				if (data[0].compareTo("TracksDir")==0)
 					TracksDir = data[1];
+				else if (data[0].compareTo("SitesDir")==0)
+					SitesDir = data[1];
 				else if (data[0].compareTo("DataDir")==0)
 					DataDir = data[1];
 				else if (data[0].compareTo("LaunchSitesFname")==0)
@@ -590,6 +594,11 @@ public class MultiLevel_Vectors_Atlantic implements ExtendedPlugInFilter, Dialog
 				{
 					NoWinds = Integer.parseInt(data[1]);
 					if (NoWinds>0) ShowMultiTracks = true;
+				}
+				else if (data[0].compareTo("ShowSites")==0)
+				{
+					int iShowSites = Integer.parseInt(data[1]);
+					if (iShowSites>0) ShowSites= true;
 				}
 				else if (data[0].compareTo("arrowScale")==0)
 					arrowScale = Float.parseFloat(data[1]);
@@ -1994,17 +2003,16 @@ public class MultiLevel_Vectors_Atlantic implements ExtendedPlugInFilter, Dialog
 				 else
 					 ReadWinds();	
              }
-			 //IJ.log("ShowDialog, MetNumImages="+MetNumImages+", MetNumH="+MetNumH);
+		//IJ.log("ShowDialog, MetNumImages="+MetNumImages+", MetNumH="+MetNumH);
 			 if (DoExtrapolateHeights)
 			    ExtrapolateHeights();
 			 //IJ.log("After Height extrapolation, MetNumImages="+MetNumImages+", MetNumH="+MetNumH);		 
-  	     }
-  	     
+  	     }	     
   	     ListSites(SitesDir,"LaunchSites_");
   	     ListSites(SitesDir,"LandingSites_");
  
   	     ListFiles(TracksDir,"Yearly_Details");
- 	     	 
+	     	 
 		int i;
 	    IntervalHeight[1]=13; // MM temporary!
 	    
@@ -2060,7 +2068,7 @@ public class MultiLevel_Vectors_Atlantic implements ExtendedPlugInFilter, Dialog
 		gd.addNumericField("MetIntervalMultiplier:",MetIntervalMultiplier,0);
 		gd.addChoice("Launch_Site",LaunchChoices,LaunchChoices[SelectedLaunchSite]);
 		gd.addChoice("Landing_Site",LandingChoices,LandingChoices[SelectedLandingSite]);
-		
+			
 		Button bt1 = new Button("Calc Yearly Best Tracks");
 		bt1.addActionListener(this);
 		gd.add(bt1);
@@ -2073,12 +2081,13 @@ public class MultiLevel_Vectors_Atlantic implements ExtendedPlugInFilter, Dialog
 		bt3.addActionListener(this);
 		gd.add(bt3);
 		gd.addMessage("");
-		
+			
 		//gd.addMessage("--- Process MultiTracks (Balloon positions & Connectivity) ---");
 		gd.addMessage("Process MultiTracks");
 		gd.addMessage("--------------------");
 		gd.addMessage("--------------------");
 		gd.addMessage("--------------------");
+
 		gd.addChoice("Select_Tracks",MultiTrackChoices,MultiTrackChoices[SelectedMultiTrackFile]);
 		gd.addSlider("FlightTime (hours):", 0.0,  MaxBalloonLaunchTimes*MetTimeStep, BalloonLaunchTime);		
 		gd.addCheckbox("ShowMultiTracks from file", ShowMultiTracks); gd.addToSameRow();
@@ -2089,13 +2098,13 @@ public class MultiLevel_Vectors_Atlantic implements ExtendedPlugInFilter, Dialog
 		//gd.addCheckbox("Calc_Connectivity Stats",ConnectivityStats); gd.addToSameRow();
 		gd.addNumericField("UsePrevLaunchGap:",UsePrevLaunchGap,0);
 		gd.addNumericField("DialogMaxBalloonTimeSteps:",DialogMaxBalloonTimeSteps,0);
- 		
+		
         gd.addDialogListener(this);
 		gd.showDialog();
 
 		if (gd.wasCanceled()) return DONE;
 		IJ.register(this.getClass());       //protect static class variables (filter parameters) from garbage collection    
-		IJ.log("End of ShowDialog");
+	//IJ.log("End of ShowDialog");
 		return IJ.setupDialog(imp, flags); 
     }
     
