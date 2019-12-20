@@ -92,7 +92,7 @@ runMacro("getdirs","WindsConfig_2015_Daily.txt,Daily 2015 winds");
 label=Connect Test
 icon=noicon
 arg=<macro>
-runMacro("D:/CGI/P2PHAPS/ImageJ/MacroConnectTest.txt");
+runMacro("D:/P2PHAPS/Config/MacroConnectTest.txt");
 </macro>
 
 </line>
@@ -110,8 +110,8 @@ runMacro("getdirs","WindsConfig_PlotBalloons.txt,No winds");
 label=LaunchSites
 icon=noicon
 arg=<macro>
-File.copy("D:/CGI/P2PHAPS/ImageJ/LaunchSites_x3.txt","D:/CGI/P2PHAPS/ImageJ/LaunchSites.txt");
-runMacro("getdirs","WindsConfig_PlotBalloons.txt,LaunchSites");
+File.copy("D:/P2PHAPS/Config/LaunchSites_x3.txt","D:/P2PHAPS/Config/LaunchSites.txt");
+runMacro("getdirs","WindsConfig_LaunchSites.txt,LaunchSites");
 </macro>
 
 <button>
